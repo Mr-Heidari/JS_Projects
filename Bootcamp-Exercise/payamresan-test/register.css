@@ -1,0 +1,129 @@
+body{
+    background-image: url(painting-mountain-lake-with-mountain-background.jpg);
+    background-repeat: none;
+    background-size: 100vw 100vh;
+    height: 100%;
+    overflow: hidden;
+}
+#register-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px solid black;
+    width: 350px;
+    height: 600px;
+    background-color:rgba(22, 72, 99,80%);
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+}
+#register-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-left: 25px;
+}
+#register-form #password,#confirmed-pas,#telephone{
+    color: white;
+    padding-top: 15px;
+    display: block;
+    height: 10%;
+    width: 85%;
+    box-sizing: border-box;
+    margin: 40px 0 0 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid white;
+    outline: none;
+}
+#register-form p{
+    position: absolute;
+}
+#register-lable{
+    border-bottom: 3px solid silver;
+    margin-top: 15px;
+    padding-bottom: 20px;
+    color:white;
+    font-size: 32px;
+}
+#sabtenam{
+    background-color: rgba(255, 196, 54,30%);
+    border: none;
+    outline: none;
+    display: block;
+    box-sizing: border-box;
+    margin: 40px 0 0 0;
+    height: 10%;
+    width: 85%;
+    border-radius: 30px;
+    font-size: 24px;
+    transition: 0.4s;
+}
+#Login-page-btn{
+    font-size: 24px;
+    background-color: #ffc436;
+    border: none;
+    outline: none;
+    display: block;
+    box-sizing: border-box;
+    margin: 40px 0 0 0;
+    height: 10%;
+    width: 85%;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#ramz-p{
+    top: 61%;
+    color: rgb(255, 255, 255);
+}
+#ramz2-p{
+    top: 44.5%;
+    color: white;
+}
+#pas2-lable,#pas-lable,#tel-lable{
+    position: absolute;
+    color: white;
+    pointer-events: none;
+}
+#pas2-lable{
+    transition: 0.3s;
+    top: 57%;
+}
+#pas-lable{
+    transition: 0.3s;
+    top: 40%;
+}
+#tel-lable{
+    transition: 0.3s;
+    top: 23.5%;
+}
+#telephone:hover~#tel-lable,#telephone:valid~#tel-lable{
+    top: 19.5%;
+}
+#password:hover~#pas-lable,#password:valid~#pas-lable{
+    top: 36%;    
+}
+#confirmed-pas:hover~#pas2-lable,#confirmed-pas:valid~#pas2-lable{
+    top: 53%;
+}
+#Login-span-icon{
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    top: 88.5%;
+    right: 68%;
+    font-size: 24px;
+    font-weight: bolder;
+    transition: 0.5s;
+    color: rgb(0, 21, 36); ;
+}
+#Login-page-btn:hover{
+    padding-left: 30px;
+}
+#Login-page-btn:hover~#Login-span-icon{
+    opacity: 100%;
+    right: 63.5% ;
+}

@@ -1,0 +1,18 @@
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-color);
+    padding: 20px;
+    transition: 0.5s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}

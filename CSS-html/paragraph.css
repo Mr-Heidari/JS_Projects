@@ -1,0 +1,15 @@
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.new-p{
+    color: coral;
+}
+body{text-align: center;}
+.from{
+    color: lightblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.from:hover{
+    color: blue;
+}

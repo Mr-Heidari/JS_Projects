@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            .Reset{
+                border: none;
+                background-color: gray;
+                background-image: initial;
+            }
+            body{
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="
+            counter();
+            paragraph();">
+        test</button>
+        <button onclick="
+            let zero=0;
+            localStorage.setItem('counter',JSON.stringify(zero));
+            document.querySelector('.paragraph').innerHTML=0;" class="Reset">
+        Reset</button>
+        <p class="paragraph"></p>
+        <input class="input" placeholder="enter number"><button onclick="
+           check();
+        ">check</button>
+        <script>
+            function paragraph(){
+                let temp=localStorage.getItem('counter');
+                document.querySelector('.paragraph').innerHTML=temp;
+            }
+            function counter(){
+                let counter=JSON.parse(localStorage.getItem('counter'))
+                counter++;
+                localStorage.setItem('counter',JSON.stringify(counter));
+                console.log(counter);
+            }
+            paragraph();
+            function check(){
+                const inputElement=document.querySelector('.input');
+                let vale=inputElement.value;
+                console.log(vale);
+            }
+        </script>
+    </body>
+</html>

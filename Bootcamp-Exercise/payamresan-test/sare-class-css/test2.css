@@ -1,0 +1,716 @@
+body{
+    margin: 0;
+    background-image: url(annie-spratt-wuc-KEIBrdE-unsplash.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+span{
+    cursor: pointer;
+}
+#background{
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.934);
+    display: grid;
+    box-sizing: border-box;
+    width: 300px;
+    height: 590px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 25px;
+    grid-template-areas: 
+    "header"
+    "header"
+    "navbar"
+    "message"
+    "message"
+    "message"
+    "message"
+    "message"
+    "groups"
+    "groups"
+    "groups"
+    "groups"
+    "footer";
+        grid-template-rows: 25px 25px 25px 50px 50px 50px 50px 100px 50px 25px 40px 50px 50px; 
+        grid-template-columns: 300px;
+}
+#header{
+    grid-area: header;
+    padding-top: 7px;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgb(82, 82, 255);
+    font-size: 24px;
+    position: relative;
+    margin: 0;
+    width: 100%;
+}
+#menu{
+    opacity: 60%;
+    left: 3%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(bx-menu-alt-left.svg);
+}
+#shield{
+    opacity: 60%;
+    background-image: url(shield-yes.svg);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 15%;
+    background-size: cover;
+    top: 20%;
+}
+#search{
+    opacity: 60%;
+    background-image: url(bx-search.svg);
+    width: 20px;
+    height: 20px;
+    right: 5%;
+    top: 20%;
+    position: absolute;
+    background-size: cover;
+}
+#navbar{
+    grid-area: navbar;
+    border: none;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#navbar>button{
+    color: gray;
+    margin-left: 20px;
+    box-sizing: border-box;
+    font-size: 10px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+#navbar>button:hover{
+    color: blue;
+
+}
+#navbar>button:focus{
+    color: blue;
+}
+#home-btn:focus~#bottomborder{
+    width: 40px;
+    left: 5%;
+}
+#message-btn:focus~#bottomborder{
+    width: 58px;
+    left: 27%;
+}
+#group-btn:focus~#bottomborder{
+    width: 49px;
+    left: 54%;
+}
+#channel-btn:focus~#bottomborder{
+    width: 49px;
+    left: 81%;
+}
+#home-btn:hover~#home{
+    opacity: 70%;
+    background-image: url(home-outline-blue.svg);
+}
+#home-btn:focus~#home{
+    opacity: 70%;
+    background-image: url(home-outline-blue.svg);
+}
+#message-btn:hover~#message{
+    opacity: 70%;
+    background-image: url(message-circle-blue.svg);
+}
+#message-btn:focus~#message{
+    opacity: 70%;
+    background-image: url(message-circle-blue.svg);
+}
+#group-btn:hover~#groups{
+    opacity: 70%;
+    background-image: url(user-group-blue.svg);
+}
+#group-btn:focus~#groups{
+    opacity: 70%;
+    background-image: url(user-group-blue.svg);
+}
+#channel-btn:hover~#channels{
+    opacity: 70%;
+    background-image: url(trumpet-blue.svg);
+}
+#channel-btn:focus~#channels{
+    opacity: 70%;
+    background-image: url(trumpet-blue.svg);
+}
+#home{
+    left: 3%;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    background-size: cover;
+    background-repeat: none ;
+    background-image: url(home-outline.svg);
+}
+#message{
+    opacity: 50%;
+    left: 25%;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    background-size: cover;
+    background-repeat: none ;
+    background-image: url(message-circle.svg);
+}
+#groups{
+    left: 53%;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    background-size: cover;
+    background-repeat: none ;
+    background-image: url(user-group.svg);
+}
+#channels{
+    right: 17%;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    background-size: cover;
+    background-repeat: none ;
+    background-image: url(trumpet.svg);
+}
+#bottomborder{
+    top: 90%;
+    background-color: silver;
+    height: 2px;
+    position: absolute;
+}
+#dm-message{
+    position: relative;
+    justify-self: center;
+    margin: 0;
+    width: 100%;  
+    grid-area: message;
+}
+#dm-message>div{
+    cursor: pointer;
+}
+#gp-message{
+    position: relative;
+    justify-self: center;
+    margin: 0;
+    width: 100%;
+    grid-area: groups;
+}
+#gp-message>div{
+    cursor: pointer;
+}
+#footer{
+    justify-self: center;
+    margin: 0;
+    width: 100%;
+    grid-area: footer;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around ;
+}
+#dm-message p{
+    padding-left: 19px;
+}
+#sedat{
+    background-size: cover;
+    top: 6%;
+    right: 6%;
+    transform: rotate(90deg);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(bx-dots-vertical-rounded.svg);
+}
+#msg1{
+    position: relative;
+    margin-top: -9px;
+    margin-left: 5%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    height: 55px;
+    background-color: white;
+    box-shadow: 0 0 18px 0px #0000001a;
+    width: 90%;
+}
+#msg2{
+    position: relative;
+    margin-left: 5%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-top: 6px;
+    height: 55px;
+    background-color: white;
+    box-shadow: 0 0 18px 0px #0000001a;
+    width: 90%;
+}
+#msg3{
+    position: relative;
+    margin-left: 5%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-top: 6px;
+    height: 55px;
+    background-color: white;
+    box-shadow: 0 0 18px 0px #0000001a;
+    width: 90%;
+}
+#msg4{
+    position: relative;
+    margin-left: 5%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-top: 6px;
+    height: 55px;
+    background-color: white;
+    box-shadow: 0 0 18px 0px #0000001a;
+    width: 90%;
+}
+#p-messages{
+    color: blue;
+    position: absolute;
+    transform: translate(-50%);
+    margin-left: 50%;
+}
+#prof-img1{
+    background-size: cover;
+    background-image:url(m1.jpg) ;
+    border-radius: 7.5px;
+    top: 7.5px;
+    left: 5%;
+    position: absolute;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+
+}
+#name1{
+    font-size: 14px;
+    left: 22%;
+    top: 20%;
+    position: absolute;
+}
+#last-msg1{
+    color: gray;
+    font-size: 12px;
+    left: 22%;
+    top: 53%;
+    position: absolute;
+}
+#dot1{
+    top: 68%;
+    left: 17%;
+    position: absolute;
+    border-radius: 50px;
+    width: 9px;
+    height: 9px;
+    background-color: rgb(2, 161, 2);
+    border: 2px solid white;
+}
+#time1{
+    color: gray;
+    font-size: 10px;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+#seen1{
+    outline: none;
+    border: none;
+    top: 55%;
+    right: 5%;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    box-sizing: border-box;
+    background-image: url(check-all-green.svg);
+    width: 20px;
+    height: 12px;
+}
+#prof-img2{
+    background-size: cover;
+    background-image:url(jurica-koletic-7YVZYZeITc8-unsplash.jpg) ;
+    border-radius: 7.5px;
+    top: 7.5px;
+    left: 5%;
+    position: absolute;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+
+}
+#name2{
+    font-size: 14px;
+    left: 22%;
+    top: 20%;
+    position: absolute;
+}
+#last-msg2{
+    color: gray;
+    font-size: 12px;
+    left: 22%;
+    top: 53%;
+    position: absolute;
+}
+#dot2{
+    top: 68%;
+    left: 17%;
+    position: absolute;
+    border-radius: 50px;
+    width: 9px;
+    height: 9px;
+    background-color: rgb(176, 176, 176);
+    border: 2px solid white;
+}
+#time2{
+    color: gray;
+    font-size: 10px;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+#seen2{
+    outline: none;
+    border: none;
+    top: 55%;
+    right: 5%;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgb(63, 63, 255);
+    width: 20px;
+    height: 12px;
+}
+#prof-img3{
+    background-size: cover;
+    background-image:url(michael-dam-mEZ3PoFGs_k-unsplash.jpg) ;
+    border-radius: 7.5px;
+    top: 7.5px;
+    left: 5%;
+    position: absolute;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+}
+#name3{
+    font-size: 14px;
+    left: 22%;
+    top: 20%;
+    position: absolute;
+}
+#last-msg3{
+    color: gray;
+    font-size: 12px;
+    left: 22%;
+    top: 53%;
+    position: absolute;
+}
+#dot3{
+    top: 68%;
+    left: 17%;
+    position: absolute;
+    border-radius: 50px;
+    width: 9px;
+    height: 9px;
+    background-color: rgb(176, 176, 176);
+    border: 2px solid white;
+}
+#time3{
+    color: gray;
+    font-size: 10px;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+#seen3{
+    outline: none;
+    border: none;
+    top: 55%;
+    right: 5%;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgb(157, 157, 157);
+    width: 20px;
+    height: 12px;
+}
+#prof-img4{
+    background-size: cover;
+    background-image:url(albert-dera-ILip77SbmOE-unsplash.jpg) ;
+    border-radius: 7.5px;
+    top: 7.5px;
+    left: 5%;
+    position: absolute;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+
+}
+#name4{
+    font-size: 14px;
+    left: 22%;
+    top: 20%;
+    position: absolute;
+}
+#last-msg4{
+    color: gray;
+    font-size: 12px;
+    left: 22%;
+    top: 53%;
+    position: absolute;
+}
+#dot4{
+    top: 68%;
+    left: 17%;
+    position: absolute;
+    border-radius: 50px;
+    width: 9px;
+    height: 9px;
+    background-color: rgb(2, 161, 2);
+    border: 2px solid white;
+}
+#time4{
+    color: gray;
+    font-size: 10px;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+#seen4{
+    outline: none;
+    border: none;
+    top: 55%;
+    right: 5%;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    box-sizing: border-box;
+    background-image: url(check-lg-green.svg);
+    width: 20px;
+    height: 12px;
+}
+#gp-p{
+    margin-top: 8px;
+    padding-left: 19px;;
+}
+#gp-sedat{
+    background-size: cover;
+    top: 6%;
+    right: 6%;
+    transform: rotate(90deg);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(bx-dots-vertical-rounded.svg);
+}
+#gp-msg1{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 5%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    height: 55px;
+    background-color: white;
+    box-shadow: 0 0 18px 0px #0000001a;
+    width: 90%;
+}
+#gp-img1{
+    background-size: cover;
+    background-image:url(friends.jpg) ;
+    border-radius: 7.5px;
+    top: 7.5px;
+    left: 5%;
+    position: absolute;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+}
+#gp-name1{
+    font-size: 14px;
+    left: 22%;
+    top: 20%;
+    position: absolute;
+}
+#gp-last-msg1{
+    color: gray;
+    font-size: 12px;
+    left: 22%;
+    top: 53%;
+    position: absolute;
+}
+#gp-time1{
+    color: gray;
+    font-size: 10px;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+#gp-seen1{
+    border: none;
+    top: 55%;
+    right: 5%;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    box-sizing: border-box;
+    background-image: url(check-all-green.svg);
+    width: 20px;
+    height: 12px;
+}
+#gp-msg2{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 5%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    height: 55px;
+    background-color: white;
+    box-shadow: 0 0 18px 0px #0000001a;
+    width: 90%;
+}
+#gp-img2{
+    background-size: cover;
+    background-image:url(support-team.jpg) ;
+    border-radius: 7.5px;
+    top: 7.5px;
+    left: 5%;
+    position: absolute;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+}
+#gp-name2{
+    font-size: 14px;
+    left: 22%;
+    top: 20%;
+    position: absolute;
+}
+#gp-last-msg2{
+    color: gray;
+    font-size: 12px;
+    left: 22%;
+    top: 53%;
+    position: absolute;
+}
+#gp-time2{
+    color: gray;
+    font-size: 10px;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+#gp-seen2{
+    outline: none;
+    border: none;
+    top: 55%;
+    right: 5%;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgb(63, 63, 255);
+    width: 20px;
+    height: 12px;
+}
+#gp-dot2{
+    top: 68%;
+    left: 17%;
+    position: absolute;
+    border-radius: 50px;
+    width: 9px;
+    height: 9px;
+    background-color: rgb(176, 176, 176);
+    border: 2px solid white;
+}
+#footer>button{
+    font-size: 10px;
+    text-align: center;
+    width: 40px;
+    border: none;
+    justify-self: center;
+}
+#ft-edit{
+   background-color: transparent;
+}
+#ft-home{
+    background-color: transparent;
+    color: blue;
+    padding-top: 20px;
+    background-position: 10px 7.5px;
+    background-repeat: no-repeat;
+    background-image: url(home-solid.svg);
+    cursor: pointer;
+}
+#ft-calls{
+    background-color: transparent;
+    color: gray;
+    padding-top: 20px;
+    background-position: 10px 7.5px;
+    background-repeat: no-repeat;
+    background-image: url(call-sharp.svg);
+    cursor: pointer;
+}
+#ft-contacts{
+    background-color: transparent;
+    color: gray;
+    padding-top: 20px;
+    background-position: 15px 7.5px;
+    background-repeat: no-repeat;
+    background-image: url(profile-fill.svg);
+    cursor: pointer;
+}
+#ft-setting{
+    background-color: transparent;
+    color: gray;
+    padding-top: 20px;
+    background-position: 12px 7.5px;
+    background-repeat: no-repeat;
+    background-image: url(settings-bold.svg);
+    cursor: pointer;
+}
+#Edit{
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 87.5%;
+    border-radius: 50px;
+    position: absolute;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px 35px;
+    background-color: rgb(58, 58, 255);
+    background-image: url(edit-16-regular.svg);
+    cursor: pointer;
+}

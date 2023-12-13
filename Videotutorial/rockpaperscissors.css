@@ -1,0 +1,17 @@
+.leader_board{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+.rock{
+    background-color: transparent;
+    border: none;
+}
+.paper{
+    background-color:transparent;
+    border: none;
+}
+.scissors{
+    background-color: transparent;
+    border: none;
+}

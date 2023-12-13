@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="quran-metadata.js"></script>
+    <script>
+        let x=79;
+        let check=false;
+        for(let i=1;i<32;i++){
+            if(QuranData.Juz[i][0]===x){
+                if(QuranData.Juz[i][1]!==1&&check==false){
+                    alert(i-1);
+                }
+                alert(i);
+                check=true;
+            }
+            else if(QuranData.Juz[i][0]>x&&check==false){
+                    alert(i-1);
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

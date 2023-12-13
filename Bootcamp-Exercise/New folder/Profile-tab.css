@@ -1,0 +1,53 @@
+.Avatar{
+    border: 2px solid black;
+    cursor: pointer;
+    width: 95px;
+    height: 95px;
+    background-color: orange;
+    background-repeat: no-repeat;
+    background-position: center ;
+    border-radius: 50px;
+}
+.my-ol{
+    display: inline-block;
+    margin-right: -20px;
+    font-size: 20px;
+}
+.form{
+    height: 400px;
+    width: 400px;
+}
+.F-name{
+    border: 2px solid gray;
+    width: 250px;
+    height: 30px;
+}
+.L-name{
+    border: 2px solid gray;
+    width: 250px;
+    height: 30px;
+}
+.faravin{
+    color: green;
+}
+.parent{
+    width: 300px;
+    height: 615px;
+    border: 3px solid;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    right: 28%;
+    top: 50%;
+}
+
+#f-name,#l-name,#edit,#legend{
+    font-size: 18px;
+}
+#fieldset{
+    margin-top: 15px;
+    width: 276px;
+    height: 284px;
+    margin-right: -2.3px;
+    border: 3px solid;
+}

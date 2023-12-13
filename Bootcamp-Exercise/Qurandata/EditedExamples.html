@@ -1,0 +1,22 @@
+<script src="quran-metadata.js"></script>
+<script>
+  let input = +prompt("shomare soore ra vared konid");
+  let output = "";
+  for (let j = 1; j < QuranData.Sajda.length; j++) {
+    if (input === QuranData.Sajda[j][0]) {
+      output += QuranData.Sajda[j][0];
+      if (QuranData.Sajda[j][2] === "recommended") {
+        output += " Mostahab";
+        alert(output);
+        break;
+      } else {
+        output += " Vajeb";
+        alert(output);
+        break;
+      }
+    }
+  }
+  if (output === "") {
+    alert("nist");
+  }
+</script>

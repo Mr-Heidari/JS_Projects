@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <button onclick="
+            if (Coinflip()==='Head'){console.log('You Win');
+            Win++;
+            localStorage.setItem('Win',JSON.stringify(Win));
+            alert('Your Wins : '+Win);}
+            else {console.log('You lose');
+            lose++
+            localStorage.setItem('lose',JSON.stringify(lose));
+            alert('Your Loose : '+lose);}">
+            head
+        </button>
+        <button onclick="
+            if (Coinflip()==='Tail'){
+            console.log('You Win');
+            Win++;
+            localStorage.setItem('Win',JSON.stringify(Win));
+            alert('Your Wins : '+Win);
+            }
+            else {console.log('You lose');
+            lose++;
+            localStorage.setItem('lose',JSON.stringify(lose));
+            alert('Your Loose : '+lose);
+            }">
+            tail
+        </button> 
+        <button onclick="
+            Win=0;
+            localStorage.setItem('Win',JSON.stringify(Win));
+            lose=0;
+            localStorage.setItem('lose',JSON.stringify(lose));
+            ">
+            Reset
+        </button>
+        <script>
+            let Win=JSON.parse(localStorage.getItem('Win'));
+            let lose=JSON.parse(localStorage.getItem('lose'));
+            function Coinflip(){
+                let x=Math.random();
+                if(x<0.51)return 'Head';
+                else return 'Tail';
+            }
+        </script>
+    </body>
+</html>

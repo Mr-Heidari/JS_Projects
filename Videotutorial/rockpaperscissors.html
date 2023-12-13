@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="rockpaperscissors.css">
+    </head>
+
+    <body>
+        <button onclick="
+            if(check()===0){
+                mosavi++;
+                localStorage.setItem('mosavi',JSON.stringify(mosavi))
+                }
+            else if(check===1){
+                loose++;
+                localStorage.setItem('loose',JSON.stringify(loose))}
+            else{
+                win++;
+                localStorage.setItem('win',JSON.stringify(win))}
+                leaderboar()"
+                class="rock"
+            >
+            <img src="Untitled-3.png">
+        </button>
+        <button onclick="
+            if(check()===0){
+                win++;
+                localStorage.setItem('win',JSON.stringify(win))}
+            else if(check===1){
+                mosavi++;
+                localStorage.setItem('mosavi',JSON.stringify(mosavi))}
+            else{
+                loose++;
+                localStorage.setItem('loose',JSON.stringify(loose))}
+                leaderboar()"
+                class="paper"
+            >
+            <img src="Untitled-2.png">
+        </button>
+        <button onclick="
+            if(check()===0){
+                loose++;
+                localStorage.setItem('loose',JSON.stringify(loose))}
+            else if(check===1){
+                win++;
+                localStorage.setItem('win',JSON.stringify(win))}
+            else{
+                mosavi++;
+                localStorage.setItem('mosavi',JSON.stringify(mosavi))}
+                leaderboar()"
+                class="scissors"
+                >
+                <img src="Untitled-1.png">
+        </button>
+        <p class="leader_board"></p>
+        <script>
+            function check(){
+                let rand=Math.floor(Math.random()*3);
+                return rand;
+            }
+            let win=JSON.parse(localStorage.getItem('win'));
+            let mosavi=JSON.parse(localStorage.getItem('mosavi'));
+            let loose=JSON.parse(localStorage.getItem('loose'));
+            function leaderboar(){
+                document.querySelector('.leader_board').innerHTML='your win = '+win+' your loose = '+loose+' your mosavi = '+mosavi;
+            }
+            leaderboar();
+        </script>
+    </body>
+</html>

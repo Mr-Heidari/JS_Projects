@@ -1,0 +1,142 @@
+    body{
+        min-width: 300px;
+        margin: 0;
+        overflow: hidden;
+    }
+    #Payamresan-page{
+        position: absolute;
+        background-color:rgba(22, 72, 99,90%);
+        width: 100%;
+        height: 100%;
+    }
+    #header{
+        background-color: darkslategrey;
+        width: 100%;
+        height: 30px;
+    }
+    #left-side-bar{
+        position: absolute;
+        overflow: hidden;
+        width: 80px;
+        height: 100%;
+        background-color: rgb(26, 45, 45)
+    }
+    #left-side-bar>button{
+        background-color: transparent;
+        border-radius: 30px;
+        overflow: hidden;
+        border: none;
+        width: 55px; 
+        height: 55px;
+        margin: 10px 12px 0 0;
+        display: block;
+    }
+    #chats{
+        text-align: center;
+        right: 70px;
+        background-color: azure;
+        width: 60%;
+        height: 100%;
+        position: absolute;
+    }
+    #addcontact-btn{
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        right: 100px;
+        top: 90%;
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat; 
+        transition: 0.3s;
+        background-color:rgba(26, 45, 45,100%);;
+        background-image: url(edit.png);
+        border: none;
+        outline: none;
+    }
+    #addcontact-btn:hover{
+        cursor: pointer;
+        
+    }
+    #addcontact-btn:focus{
+        background-color: rgba(26, 45, 45,40%);
+    }
+    #addcontact-btn:focus~#addcontact-div{
+        position: fixed;
+        top:50%;
+        right: 50%;
+        width: 250px;
+        height: 300px;
+        opacity: 100%;
+        visibility: visible;
+        transform: translate(+50%,-50%);
+    }
+    #chats input{
+        outline: none;
+        padding: 5px;
+        box-sizing: border-box;
+        border: 2px solid silver;
+        border-radius: 30px;
+        width: 85%;
+        height: 35px;
+        margin-top: 10px;
+    }
+    #sekhat{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(list-ul-regular-24.png);
+        transition: 0.3s;
+    }
+    #sekhat:hover{
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+    #channel{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(channels.png);
+        transition: 0.3s;
+    }
+    #channel:hover{
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+    #all-chats{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(contacts.png);
+        transition: 0.3s;
+    }
+    #all-chats:hover{
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+    #group{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(group.png);
+        transition: 0.3s;
+    }
+    #group:hover{
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+    #addcontact-div{
+        font-size: 24px;
+        box-sizing: border-box;
+        padding-top: 140px;
+        text-align: center;
+        border-radius: 30px;
+        visibility: hidden;
+        top: 90%;
+        right: 30%;
+        transform: translate(+50%,-50%);
+        position: absolute;
+        background-color:rgba(26, 45, 45,10%);
+        width: 25px;
+        height: 40px;
+        opacity: 0%;
+        transition: 0.3s;
+    }
+    @media (min-width:700px){
+        #chats{
+            width: 450px;
+        }
+    }
+

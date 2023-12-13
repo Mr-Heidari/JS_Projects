@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="Login-page.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="Login-page.js"></script>
+        <div class="Login-div" id="Login-div">
+            <div class="Login-lable-div">Login</div>
+                <form action="">
+                    <input type="text" class="Username-input" placeholder="Username" required>
+                    <input type="password" class="Password-input" placeholder="Password" required>
+                    <br>
+                    <P class="Forgot-password-p"><u>forgot password?</u></P>
+                    <input type="submit" class="btn-submit">
+                </form>
+                <p>Not a member yet? <strong class="Register-str" onclick="visibility1()">Register</strong></p>
+        </div>
+        <div class="Register-div" id="Register-div">
+            <div class="Register-lable">Register</div>
+            <form action="">
+                <input type="text" class="Username-input-Rgr" id="Username-input-Rgr" placeholder="enter Username" required >
+                <br>
+                <input type="text" class="Password-input-Rgr" id="Password-input-Rgr" placeholder="enter Password" required onkeyup="check()" >
+                <br>
+                <input type="text" class="PasswordConfirmed-input-Rgr" placeholder="repeat Password" required>
+                    <div class="p-control">
+                        <p id="p1">Lenght more than 5 characters </p> 
+                        <p id="p2">Lenght less than 10 characters</p>
+                        <p id="p3">Contain numerical characters</p>
+                        <p id="p4">Contain special characters</p>
+                    </div>
+                <div class="image-div">
+                    <img src="bx-check.svg" alt="" class="img-d1" id="img-d1">
+                    <br>
+                    <img src="bx-check.svg" alt="" class="img-d2" id="img-d2">
+                    <br>
+                    <img src="bx-check.svg" alt="" class="img-d3" id="img-d3">
+                    <br>
+                    <img src="bx-check.svg" alt="" class="img-d4" id="img-d4">
+                    <br>
+                </div>
+                <input type="Submit" value="Sign Up" class="Sign-Up">
+            </form>
+            <p class="dyh-already-acc">Do you have already account?<strong class="Login-str" onclick="visibility2()">Login</strong></p>
+        </div>
+    </body>
+</html>

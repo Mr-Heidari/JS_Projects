@@ -1,0 +1,19 @@
+#chatbox{
+    width: 500px;
+    height: 600px;
+    border: 2px solid gray;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+#sendmessage{
+    position: relative;
+    transform: translate(120%,-2000%);
+    border: 2px solid gray;
+    width: 450px;
+    height: 50px;
+    margin-top: 105%;
+    border-radius: 30px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="quran-metadata.js"></script>
+    <script>
+        let surename=prompt();
+        if(surename[0]!=="ا"&&surename[1]!=="ل"){
+            surename="ال"+surename;
+        }
+        for(let i=0;i<115;i++){
+            if(QuranData.Sura[i][4]==surename){
+                let check=false;
+                for(let j=1;j<32;j++){
+                    if(QuranData.Juz[j][0]===i){
+                        if(QuranData.Juz[j][1]!==1&&check==false){
+                            console.log(surename+"sure"+i+"darjoze"+(j-1)+"qurangharardarad");
+                    }
+                    console.log(surename+"sure"+i+"darjoze"+j+"qurangharardarad");
+                    check=true;
+                    break;
+                    }
+                    else if(QuranData.Juz[j][0]>i&&check==false){
+                        console.log(surename+"sure"+i+"darjoze"+(j-1)+"qurangharardarad");
+                        break;
+                }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

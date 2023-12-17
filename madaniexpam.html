@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="quran-metadata.js"></script>
+    <script>
+        let counter=0;
+        let madaniout="";
+        for(let i=1;i<116;i++){
+            if(QuranData.Sura[i][7]==="Medinan"){
+                counter++;
+                madaniout+=counter+"-"+ QuranData.Sura[i][4]+"\n";
+            }
+        }
+        console.log(madaniout);
+        alert(madaniout);
+    </script>
+</body>
+</html>
